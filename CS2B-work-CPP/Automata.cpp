@@ -1,3 +1,11 @@
+/*****************************************************************
+*  Project Name : A cellular automaton model                     *
+*  Project Type : Assignment for CS2B (Submitted May 2, 2018)    * 
+*  Language     : C++ Source file and output run                 *
+*  By           : RG                                             *
+******************************************************************/
+
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,7 +22,6 @@ static const int TIME_RUNS = 100;
 int main()
 {
    int rule;
-   string strRule;
 
    do
    {
@@ -45,23 +52,30 @@ int main()
 class Automaton
 {
 private:
-   static const int RULES_SIZE = 8;
+   static const int RULES_SIZE = 8;  // inputs of 0-255 will convert to upto 8-bit binary
 
-   bool rules[RULES_SIZE];
+   bool rules[RULES_SIZE];           // rule as a binary(0 1) array of size 8
    string thisGen;
-   string extremeBit; //bit, "*" or " ", implied everywhere "outside"
+   string extremeBit;          //bit, "*" or " ", implied everywhere "outside"
    unsigned int displayWidth;  //an odd number so it can be perfectly centered
 
 public:
    static const int MAX_DISPLAY_WIDTH = 121;
    static const int DEFAULT_DISPLAY_WIDTH = 79;
 
-   Automaton(int rule);
-   string toStringCurrentGen();
+   Automaton(int rule);       // Constructor Method
+   
+   //Setter Methods
    bool setRule(int newRule);
    void resetFirstGen();
    bool setDisplayWidth(int width);
+   
+   // Method to use the logic for checkRule per Cellular Automata systems of 
+   // deriving nextGen based on adjascent neighbors for each cell
    void propagateNewGeneration();
+   
+   // Display formatting Method
+   string toStringCurrentGen();
 };
 
 // ------------------- Automaton Class Definition --------------
@@ -69,13 +83,13 @@ public:
 //Invoked from Constructor- set the rule base on user's choice
 bool Automaton::setRule(int newRule) {
    int result;
-   const int checkRemainer = 2;
+   const int checkRemainder = 2;
    if (newRule < MIN_SET_RULE || newRule > MAX_SET_RULE)
       return false;
 
    //Uses an algorithm to convert int to a binary 
    for (int i = 0; i < RULES_SIZE; i++) {
-      result = newRule % checkRemainer;
+      result = newRule % checkRemainder;
       rules[i] = result;
       newRule /= CUT_IN_HALF;
    }
