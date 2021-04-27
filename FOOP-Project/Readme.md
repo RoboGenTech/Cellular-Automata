@@ -1,4 +1,4 @@
-#  2 diensional Cellulla Automata - Jupyter Notebook
+#  2 dimensional Cellulla Automata - Jupyter Notebook
 
 # Functional and Object-oriented Programming -final Project
 This final project produced a graphically interesting program (Conway’s Game of Life) using Java libraries. This project-based course introduced the foop paradigms including concepts such as functions, conditionals, data abstraction, recursion, lambda, higher-order functions, lists, loops, arrays, interfaces, inheritance, and polymorphism. The elements for Conway’s Game of Life included: 
