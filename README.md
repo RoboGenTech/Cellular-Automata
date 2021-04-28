@@ -4,7 +4,7 @@
   - In two of my CS courses, I Investigated the program code for Cellular Automata
   - Many image-processing algorithms use rules similar to Cellular Automata, such as creating a new pixel by adding weighted values of all its neighbors together. Thus, smoothening, sharpening, intensifying, or enhancing the image.
 
-### 2d Cellular Automata : 
+### FOOP-Project - 2d Cellular Automata : 
  I learned Conway's GameOfLife in the introductory Computer Science class called FOOP.
  Java with Swing program code exercises provided a good opportunity to practice skills with arrays, and object orientation in Java. 
  The project introduced with one of the exciting aspects of the Game of Life that there are initial patterns that yield intriguing results. 
@@ -15,7 +15,7 @@
  
  However here, I am publishing a jupyter notebooks demonstrating the convolve2d scipy library to show my experientation with 2d cellular automata and Conway's Game of Life. The notebooks are so named for that library. This library is commonly used for image convolution. The output is a new modified filtered image. A convolution is done by multiplying a pixel's and its neighboring pixels color value by a matrix.  This matrix is called kernel and often a 3X3 kernel is used. In 2d cellular automata is also using the signals of adjascent neighbors and so we utilize the 3X3 kernel as adjascent neighbors to each of the Game of Life cell. 
   
-### One dimensional cellular automaton with Wolfram's elementary CA: 
+### CS2B-work-CPP One dimensional cellular automaton with Wolfram's elementary CA: 
  Simulate cellular automaton in C++ by defining the outcome for every possible neighborhood configuration as a series of 8 bits ruleset.
  The standard Wolfram model is to start generation 0 with all cells having a state of 0 except for the middle cell. 
  The ruleset is obtained as eight 0s and 1s is an 8-bit number with possible 256 combinations. For example binary sequence for 222 is 11011110. 
