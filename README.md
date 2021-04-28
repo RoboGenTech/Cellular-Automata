@@ -2,6 +2,7 @@
   - John von Neumann: The Father of the Modern Computer is attributed to developing the cellular automata systems.
   - Illustrates the properties of complex systems at work.  
   - In two of my CS courses, I Investigated the program code for Cellular Automata
+  - Many image-processing algorithms use rules similar to Cellular Automata, such as creating a new pixel by adding weighted values of all its neighbors together. Thus, smoothening, sharpening, intensifying, or enhancing the image.
 
 ### 2d Cellular Automata : 
  I learned Conway's GameOfLife in the introductory Computer Science class called FOOP.
@@ -12,7 +13,7 @@
  - patterns that oscillate periodically such as blinker, toad, and beacon, have a Period 2.
  - patterns that repeats itself every nth generations such as glider(5-cell pattern occuring every 4th gen), and spaceship.
  
- However here, I am publishing a jupyter notebooks demonstrating the convolude2d scipy library to show my experientation with 2d cellular automata and Conway's Game of Life.
+ However here, I am publishing a jupyter notebooks demonstrating the convolve2d scipy library to show my experientation with 2d cellular automata and Conway's Game of Life. The notebooks are so named for that library. This library is commonly used for image convolution. The output is a new modified filtered image. A convolution is done by multiplying a pixel's and its neighboring pixels color value by a matrix.  This matrix is called kernel and often a 3X3 kernel is used. In 2d cellular automata is also using the signals of adjascent neighbors and so we utilize the 3X3 kernel as adjascent neighbors to each of the Game of Life cell. 
   
 ### One dimensional cellular automaton with Wolfram's elementary CA: 
  Simulate cellular automaton in C++ by defining the outcome for every possible neighborhood configuration as a series of 8 bits ruleset.
